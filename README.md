@@ -1,6 +1,6 @@
 # 📦 Inventory Saya 
 
-Aplikasi **Inventory Management berbasis Web** menggunakan **PHP, MySQL, AJAX, dan JavaScript vanilla** dengan tampilan **light mode modern ala Gen-Z**.  
+Aplikasi **Inventory Management berbasis Web** menggunakan **PHP, MySQL, AJAX, dan JavaScript vanilla**.  
 Dirancang untuk **CRUD produk**, pencarian cepat, pagination, dan tampilan detail produk dengan gambar via URL.
 
 ---
