@@ -21,23 +21,20 @@ require_once __DIR__ . '/config.php';
 <body>
 
   <!-- NAVBAR -->
-  <nav class="navbar app-nav mx-3">
-    <div class="container-fluid d-flex align-items-center justify-content-between">
-      <div class="d-flex align-items-center gap-3">
-        <div class="brand-badge" aria-hidden="true"></div>
-        <div>
-          <div class="brand-title">Inventory Saya</div>
-          <div class="brand-sub"></div>
-        </div>
-      </div>
-
-      <div class="d-flex align-items-center gap-2">
-        <button class="btn btn-fab" id="btn-add" title="Tambah produk" aria-label="Tambah produk">
-          <i class="fa fa-plus me-1"></i> Tambah Produk
-        </button>
-      </div>
+  <header class="app-header">
+  <div class="app-header-left">
+    <div class="app-logo"></div>
+    <div>
+      <h1 class="app-title">Inventory Saya</h1>
     </div>
-  </nav>
+  </div>
+
+  <div class="app-header-right">
+    <button id="btn-add" class="btn btn-primary btn-add">
+      + Tambah Produk
+    </button>
+  </div>
+</header>
 
   <!-- MAIN -->
   <main class="container">
@@ -117,3 +114,4 @@ require_once __DIR__ . '/config.php';
   <script src="assets/js/app.js"></script>
 </body>
 </html>
+
