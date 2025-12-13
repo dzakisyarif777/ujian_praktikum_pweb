@@ -1,0 +1,135 @@
+/* ===== FONT ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #6c63ff;
+  --primary-soft: #e9e8ff;
+  --bg: #f6f7fb;
+  --card-bg: rgba(255,255,255,0.85);
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+}
+
+/* ===== GLOBAL ===== */
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #f5f7ff, #eef2ff);
+  color: var(--text);
+}
+
+/* ===== HEADER ===== */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 28px;
+  background: white;
+  border-radius: 0 0 24px 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.app-header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.app-logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #6c63ff, #8b5cf6);
+}
+
+.app-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.app-subtitle {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ===== BUTTON ===== */
+.btn-add {
+  padding: 10px 18px;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(135deg, #6c63ff, #8b5cf6);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.btn-add:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(108,99,255,.35);
+}
+
+/* ===== SEARCH ===== */
+.search-box {
+  margin: 28px auto;
+  max-width: 720px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  outline: none;
+}
+
+/* ===== CARD / TABLE ===== */
+.table,
+.card {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+}
+
+.table th {
+  color: var(--primary);
+  font-size: 13px;
+  letter-spacing: .04em;
+}
+
+.table td {
+  padding: 14px;
+  vertical-align: middle;
+}
+
+/* ===== DETAIL ROW ===== */
+.detail-content {
+  display: flex;
+  gap: 18px;
+  padding: 18px;
+}
+
+.detail-content img {
+  width: 200px;
+  height: 140px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.detail-meta h5 {
+  margin: 0;
+  font-weight: 700;
+}
+
+.detail-desc {
+  color: var(--muted);
+  font-size: 14px;
+}
