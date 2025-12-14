@@ -6,7 +6,7 @@ require_once __DIR__ . '/config.php';
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Inventory Keren — Dashboard</title>
+  <title>Inventory Management System App</title>
 
   <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -18,6 +18,13 @@ require_once __DIR__ . '/config.php';
   <!-- Custom CSS -->
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
+
+<!-- TOAST CONTAINER -->
+<div id="toasts"
+     class="toast-container position-fixed top-0 end-0 p-3"
+     style="z-index: 9999">
+</div>
+
 <body>
 
   <!-- NAVBAR -->
@@ -83,7 +90,7 @@ require_once __DIR__ . '/config.php';
               <div class="col-md-4"><label class="form-label">Harga</label><input name="price" id="product-price" type="number" step="0.01" class="form-control"></div>
               <div class="col-md-4"><label class="form-label">Stok</label><input name="quantity" id="product-quantity" type="number" class="form-control"></div>
               <div class="col-12"><label class="form-label">Deskripsi</label><textarea name="description" id="product-desc" class="form-control" rows="4"></textarea></div>
-              <div class="col-12"><label class="form-label">Gambar (URL)</label><input name="image" id="product-image" class="form-control" placeholder="https://example.com/image.jpg"><div class="form-text">Boleh kosong — sistem pakai placeholder jika kosong.</div></div>
+              <div class="col-12"><label class="form-label">Gambar (URL)</label><input name="image" id="product-image" class="form-control" placeholder="https://example.com/image.jpg"><div class="form-text">Boleh kosong</div></div>
             </div>
           </div>
           <div class="modal-footer"><button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Batal</button><button type="submit" class="btn btn-primary">Simpan</button></div>
@@ -114,4 +121,3 @@ require_once __DIR__ . '/config.php';
   <script src="assets/js/app.js"></script>
 </body>
 </html>
-
