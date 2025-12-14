@@ -1,8 +1,3 @@
-// =====================================================
-// assets/js/app.js
-// Inventory App - Clean & Organized Version
-// =====================================================
-
 document.addEventListener('DOMContentLoaded', () => {
 
   /* =====================================================
@@ -273,15 +268,29 @@ document.addEventListener('DOMContentLoaded', () => {
     productForm['image'].value     = p.image || '';
   }
 
-  productForm?.addEventListener('submit', async e => {
-    e.preventDefault();
-    const fd = new FormData(productForm);
-    const action = fd.get('id') ? 'update' : 'create';
-    await fetch(BASE_URL + 'api.php?action=' + action, { method: 'POST', body: fd });
+productForm.addEventListener('submit', async (ev) => {
+  ev.preventDefault(); // ← WAJIB
+
+  const fd = new FormData(productForm);
+  const id = fd.get('id') || '';
+  const action = id ? 'update' : 'create';
+
+  const res = await fetch(BASE_URL + 'api.php?action=' + action, {
+    method: 'POST',
+    body: fd
+  });
+
+  const json = await res.json();
+
+  if (json.success) {
+    showToast('Sukses menyimpan data');
     bsProductModal.hide();
     productForm.reset();
     fetchList();
-  });
+  } else {
+    showToast(json.message || 'Gagal menyimpan', 'danger');
+  }
+});
 
   /* =====================================================
      SEARCH & INIT
