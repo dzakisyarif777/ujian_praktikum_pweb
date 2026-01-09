@@ -57,8 +57,6 @@ inventory-app/
 ├── config.php
 ├── db.php
 ├── index.php
-├── sql/
-│   └── inventory.sql
 └── README.md
 
 ```
@@ -90,10 +88,7 @@ Tabel utama: **products**
 
 ### 2️⃣ Database
 - Buka `phpMyAdmin`
-- Import file:
-```
-
-/sql/inventory.sql
+- Buka database inventory_app
 
 ````
 
